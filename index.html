@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -90,11 +90,11 @@
               </radialGradient>
             </defs>
             <circle cx="220" cy="180" r="120" fill="url(#glow)"/>
-            <g class="wires">
+            <g class="wires" stroke="#3a3847" stroke-width="1.5" fill="none" stroke-dasharray="4 6">
               <path d="M220 180 L70 70"/><path d="M220 180 L220 40"/><path d="M220 180 L370 70"/>
               <path d="M220 180 L70 290"/><path d="M220 180 L220 320"/><path d="M220 180 L370 290"/>
             </g>
-            <g class="packets">
+            <g class="packets" fill="#b3a4ff">
               <circle r="3.5"><animateMotion dur="3s" repeatCount="indefinite" path="M70 70 L220 180"/></circle>
               <circle r="3.5"><animateMotion dur="3.6s" repeatCount="indefinite" path="M220 180 L370 70"/></circle>
               <circle r="3.5"><animateMotion dur="2.8s" repeatCount="indefinite" path="M70 290 L220 180"/></circle>
@@ -102,17 +102,17 @@
               <circle r="3.5"><animateMotion dur="4s" repeatCount="indefinite" path="M220 40 L220 180"/></circle>
               <circle r="3.5"><animateMotion dur="3.8s" repeatCount="indefinite" path="M220 180 L220 320"/></circle>
             </g>
-            <g class="core">
-              <rect x="160" y="152" width="120" height="56" rx="14"/>
+            <g class="core" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" text-anchor="middle">
+              <rect x="160" y="152" width="120" height="56" rx="14" fill="#221f33" stroke="#7b61ff" stroke-width="1.5"/>
               <text x="220" y="176">Integration</text>
               <text x="220" y="194">layer</text>
             </g>
-            <g class="node"><rect x="18" y="52" width="104" height="36" rx="18"/><text x="70" y="75">IBM i ERP</text></g>
-            <g class="node"><rect x="168" y="22" width="104" height="36" rx="18"/><text x="220" y="45">SQL Server</text></g>
-            <g class="node"><rect x="318" y="52" width="104" height="36" rx="18"/><text x="370" y="75">REST APIs</text></g>
-            <g class="node"><rect x="18" y="272" width="104" height="36" rx="18"/><text x="70" y="295">SFTP / EDI</text></g>
-            <g class="node"><rect x="168" y="302" width="104" height="36" rx="18"/><text x="220" y="325">Power BI</text></g>
-            <g class="node"><rect x="318" y="272" width="104" height="36" rx="18"/><text x="370" y="295">Cloud</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="18" y="52" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="70" y="75">IBM i ERP</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="168" y="22" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="220" y="45">SQL Server</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="318" y="52" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="370" y="75">REST APIs</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="18" y="272" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="70" y="295">SFTP / EDI</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="168" y="302" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="220" y="325">Power BI</text></g>
+            <g class="node" fill="#d8d6e0" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="500" text-anchor="middle"><rect x="318" y="272" width="104" height="36" rx="18" fill="#1a1920" stroke="#2a2932"/><text x="370" y="295">Cloud</text></g>
           </svg>
         </figure>
       </div>
@@ -392,6 +392,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=2" defer></script>
 </body>
 </html>
