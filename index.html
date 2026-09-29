@@ -6,231 +6,392 @@
   <title>Roberto Gonzalez · Senior Integration Engineer</title>
   <meta name="description" content="Roberto Gonzalez, Senior Integration Engineer: ERP and systems integration, ETL, SQL Server, Python and APIs. Portfolio projects and resume.">
   <meta property="og:title" content="Roberto Gonzalez · Senior Integration Engineer">
-  <meta property="og:description" content="Integrating ERP systems, databases and APIs. Portfolio projects in data engineering, ML and cloud infrastructure.">
+  <meta property="og:description" content="I connect ERP systems, databases and APIs so business data flows reliably. Portfolio projects in data engineering, ML and cloud infrastructure.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robertogonzalez-dev.github.io/">
+  <meta name="theme-color" content="#faf9f7">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="container nav" aria-label="Main">
-      <a class="brand" href="#top">Roberto Gonzalez</a>
-      <ul>
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">Roberto Gonzalez<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
+      <a class="pill primary nav-cta" href="#contact">Get in touch</a>
     </nav>
   </header>
 
+  <!-- Shown only when printing / saving the resume as PDF -->
+  <div class="print-header">
+    <strong>Roberto Gonzalez</strong>
+    <span>Senior Integration Engineer · Granger, IN</span>
+    <span>Roberto.Gonzalez2209@gmail.com · linkedin.com/in/robertogonzalezdev · github.com/robertogonzalez-dev</span>
+  </div>
+
   <main id="main">
-    <section class="hero container" id="top">
-      <p class="eyebrow">Senior Integration Engineer · Granger, IN</p>
-      <h1>I connect business systems so data flows where it's needed.</h1>
-      <p class="lead">
-        I modernize legacy environments and integrate IBM&nbsp;i/AS400 ERP systems with SQL Server, APIs,
-        cloud services and enterprise applications, using ETL architecture, Python, SQL and automation.
-        On my own time I build data platforms, forecasting models and cloud infrastructure end to end.
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="orb" aria-hidden="true"></div>
+      <p class="eyebrow center"><span class="bullet"></span>Senior Integration Engineer · Granger, IN</p>
+      <h1 class="headline xl">
+        Systems that talk.
+        <span class="muted">Data that flows.</span>
+      </h1>
+      <p class="sub">
+        I connect ERP platforms, databases, APIs and cloud services, so the data a business depends on
+        moves reliably from where it lives to where it's needed.
       </p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">See projects</a>
-        <a class="btn" href="#experience">Resume</a>
-        <a class="btn" href="mailto:Roberto.Gonzalez2209@gmail.com">Email me</a>
+      <div class="cta-row">
+        <a class="pill primary" href="#projects">See my projects</a>
+        <a class="pill" href="#experience">View resume</a>
       </div>
-      <ul class="links" aria-label="Profiles">
+      <ul class="hero-links" aria-label="Profiles">
         <li><a href="https://github.com/robertogonzalez-dev">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/robertogonzalezdev">LinkedIn</a></li>
+        <li><a href="mailto:Roberto.Gonzalez2209@gmail.com">Email</a></li>
       </ul>
     </section>
 
-    <section class="container section" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <p class="section-intro">
-        Four of these fit together: a data platform, a forecasting model built on its data,
-        infrastructure that deploys the model to AWS, and a tool that keeps dbt projects like it healthy.
-      </p>
+    <!-- What I do: integration hub -->
+    <section class="dark" id="work" aria-labelledby="work-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow light"><span class="bullet"></span>What I do</p>
+          <h2 class="headline" id="work-title">
+            Different systems.
+            <span class="muted">One reliable flow.</span>
+          </h2>
+          <p class="body-dark">
+            At Corona Tools I architect the integrations between IBM&nbsp;i/BPCS ERP, SQL Server, financial
+            platforms and internal apps: a Python and SQL Server ETL platform, REST APIs, SSIS, SFTP and
+            RPA that replace manual work with automated, logged, dependable data flows.
+          </p>
+          <p class="note light">legacy in, modern out</p>
+        </div>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-head">
-            <h3><a href="https://github.com/robertogonzalez-dev/CommercePulse">CommercePulse</a></h3>
-            <span class="tag">Data platform</span>
-          </div>
-          <p>End-to-end e-commerce analytics platform: raw CSV ingestion into a DuckDB warehouse, dbt modeling, and business-ready APIs and dashboards.</p>
-          <ul class="facts">
-            <li>Medallion architecture (bronze, silver, gold) across 9 data domains</li>
-            <li>Star schema with 7 facts and 6 dimensions, plus reporting marts</li>
-            <li>205 dbt tests and a pytest suite enforced in CI</li>
-          </ul>
-          <p class="stack">Python · DuckDB · dbt · FastAPI · Streamlit · Docker</p>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3><a href="https://github.com/robertogonzalez-dev/PulseForecast">PulseForecast</a></h3>
-            <span class="tag">Machine learning</span>
-          </div>
-          <p>14-day demand forecasts for each product, evaluated honestly against simple baselines and served through a REST API.</p>
-          <ul class="facts">
-            <li>Leak-free features, with a test that proves future data never leaks in</li>
-            <li>Rolling-origin backtests across multiple time windows</li>
-            <li>12.8% error (WAPE) vs 23.6% for the seasonal-naive baseline on a synthetic benchmark</li>
-          </ul>
-          <p class="stack">Python · pandas · LightGBM · FastAPI · Docker</p>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3><a href="https://github.com/robertogonzalez-dev/dbt-warden">dbt-warden</a></h3>
-            <span class="tag">Open-source tool</span>
-          </div>
-          <p>A command-line linter that reads a dbt project's compiled manifest and enforces team standards before code is merged.</p>
-          <ul class="facts">
-            <li>Checks for missing tests and docs, naming conventions and source freshness</li>
-            <li>Zero dependencies, configurable rules, CI exit codes and a pre-commit hook</li>
-            <li>99% test coverage across Python 3.11–3.13</li>
-          </ul>
-          <p class="stack">Python · dbt · pytest · GitHub Actions</p>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3><a href="https://github.com/robertogonzalez-dev/PulseInfra">PulseInfra</a></h3>
-            <span class="tag">Cloud infrastructure</span>
-          </div>
-          <p>Infrastructure as code that deploys PulseForecast to AWS with keyless CI/CD and safe, automatic rollbacks.</p>
-          <ul class="facts">
-            <li>Reusable Terraform modules for networking, container registry and ECS services</li>
-            <li>GitHub Actions deploys through OIDC, with no stored AWS keys</li>
-            <li>Cost guardrails: Spot capacity, budget alerts, one-click teardown</li>
-          </ul>
-          <p class="stack">Terraform · AWS (ECS Fargate, ALB, ECR, IAM) · GitHub Actions</p>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3><a href="https://github.com/robertogonzalez-dev/FamilyRoots">FamilyRoots</a></h3>
-            <span class="tag">Full-stack app</span>
-          </div>
-          <p>A private family genealogy site: import a family tree from Ancestry, explore it visually, and keep living relatives private.</p>
-          <ul class="facts">
-            <li>GEDCOM import and an interactive family-tree view</li>
-            <li>Admin, editor and viewer roles, with privacy enforced on every endpoint</li>
-            <li>Relationship rules that prevent impossible family trees</li>
-          </ul>
-          <p class="stack">FastAPI · PostgreSQL · SQLAlchemy · React · TypeScript</p>
-        </article>
+        <figure class="hub reveal" aria-label="Diagram: business systems connected through one integration layer">
+          <svg viewBox="0 0 440 360" role="img" aria-hidden="true">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#7b61ff" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#7b61ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="220" cy="180" r="120" fill="url(#glow)"/>
+            <g class="wires">
+              <path d="M220 180 L70 70"/><path d="M220 180 L220 40"/><path d="M220 180 L370 70"/>
+              <path d="M220 180 L70 290"/><path d="M220 180 L220 320"/><path d="M220 180 L370 290"/>
+            </g>
+            <g class="packets">
+              <circle r="3.5"><animateMotion dur="3s" repeatCount="indefinite" path="M70 70 L220 180"/></circle>
+              <circle r="3.5"><animateMotion dur="3.6s" repeatCount="indefinite" path="M220 180 L370 70"/></circle>
+              <circle r="3.5"><animateMotion dur="2.8s" repeatCount="indefinite" path="M70 290 L220 180"/></circle>
+              <circle r="3.5"><animateMotion dur="3.3s" repeatCount="indefinite" path="M220 180 L370 290"/></circle>
+              <circle r="3.5"><animateMotion dur="4s" repeatCount="indefinite" path="M220 40 L220 180"/></circle>
+              <circle r="3.5"><animateMotion dur="3.8s" repeatCount="indefinite" path="M220 180 L220 320"/></circle>
+            </g>
+            <g class="core">
+              <rect x="160" y="152" width="120" height="56" rx="14"/>
+              <text x="220" y="176">Integration</text>
+              <text x="220" y="194">layer</text>
+            </g>
+            <g class="node"><rect x="18" y="52" width="104" height="36" rx="18"/><text x="70" y="75">IBM i ERP</text></g>
+            <g class="node"><rect x="168" y="22" width="104" height="36" rx="18"/><text x="220" y="45">SQL Server</text></g>
+            <g class="node"><rect x="318" y="52" width="104" height="36" rx="18"/><text x="370" y="75">REST APIs</text></g>
+            <g class="node"><rect x="18" y="272" width="104" height="36" rx="18"/><text x="70" y="295">SFTP / EDI</text></g>
+            <g class="node"><rect x="168" y="302" width="104" height="36" rx="18"/><text x="220" y="325">Power BI</text></g>
+            <g class="node"><rect x="318" y="272" width="104" height="36" rx="18"/><text x="370" y="295">Cloud</text></g>
+          </svg>
+        </figure>
       </div>
     </section>
 
-    <section class="container section" id="experience" aria-labelledby="experience-title">
-      <div class="section-title-row">
-        <h2 id="experience-title">Experience</h2>
-        <button class="btn small" type="button" onclick="window.print()">Save resume as PDF</button>
-      </div>
-
-      <ol class="timeline">
-        <li class="job">
-          <div class="job-head">
-            <h3>Senior Integrations Engineer</h3>
-            <p class="company">Corona Tools (Venanpri Group)</p>
-            <p class="dates">Sep 2023 – Present</p>
-          </div>
-          <ul>
-            <li>Architected enterprise integrations connecting IBM i/BPCS ERP, SQL Server, APIs, financial platforms and internal applications, enabling reliable data exchange across critical business systems.</li>
-            <li>Built a Python and SQL Server ETL platform that centralizes ERP data for reporting and analytics, with incremental loading, transformation, logging and automated orchestration.</li>
-            <li>Automated invoice processing and ERP data entry through RPA, replacing manual workflows, while developing T-SQL and Python solutions across SQL Server and IBM DB2.</li>
-            <li>Modernized legacy processes with REST APIs, SSIS, SQL Server Agent, SFTP and scheduled automation, partnering with Finance, Operations, IT and vendors.</li>
-          </ul>
-        </li>
-
-        <li class="job">
-          <div class="job-head">
-            <h3>Full Stack Developer</h3>
-            <p class="company">API</p>
-            <p class="dates">Sep 2022 – Sep 2023</p>
-          </div>
-          <ul>
-            <li>Developed and maintained web applications in PHP and JavaScript, improving application reliability.</li>
-            <li>Integrated Stripe payment processing and REST APIs using Python and FastAPI for secure data exchange across services.</li>
-            <li>Managed application databases and Docker containers across development, deployment and maintenance.</li>
-            <li>Used GitHub for source control and collaboration throughout development and integration projects.</li>
-          </ul>
-        </li>
-
-        <li class="job">
-          <div class="job-head">
-            <h3>Engineer</h3>
-            <p class="company">Backbone Software</p>
-            <p class="dates">Nov 2021 – Aug 2022</p>
-          </div>
-          <ul>
-            <li>Developed SQL solutions across Microsoft SQL Server, PostgreSQL and Google BigQuery for internal reporting, customer analytics and business decisions.</li>
-            <li>Built proof-of-concept and internal applications with JavaScript, React, Python, SQL and Retool.</li>
-            <li>Engineered data solutions supporting Power BI, Tableau, accounting, regulatory reporting and customer analytics.</li>
-            <li>Integrated data across reporting and analytics environments, working with stakeholders on complex data requirements.</li>
-          </ul>
-        </li>
-
-        <li class="job">
-          <div class="job-head">
-            <h3>IT Administration Manager</h3>
-            <p class="company">Peoplelink Group</p>
-            <p class="dates">Sep 2018 – Nov 2021</p>
-          </div>
-          <ul>
-            <li>Designed and developed internal business applications using Python, Django, JavaScript and Microsoft SQL Server.</li>
-            <li>Built database-driven applications and API integrations supporting Accounting, Payroll and other departments.</li>
-            <li>Developed Django applications that centralized operational data and supported data-driven workflows.</li>
-            <li>Created Power BI reporting that turned operational data into insights for employees and leadership.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <section class="container section" id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <div class="skills">
-        <div>
-          <h3>Integration &amp; ERP</h3>
-          <p>IBM i / iSeries / AS400 · BPCS ERP · IBM DB2 · REST APIs · SSIS · SFTP · RPA</p>
-        </div>
-        <div>
-          <h3>Data</h3>
-          <p>SQL / T-SQL · Microsoft SQL Server · PostgreSQL · BigQuery · dbt · DuckDB · Power BI · Tableau</p>
-        </div>
-        <div>
-          <h3>Languages &amp; frameworks</h3>
-          <p>Python · JavaScript · TypeScript · React · Django · FastAPI · PHP · PowerShell · C# (foundational)</p>
-        </div>
-        <div>
-          <h3>Cloud &amp; DevOps</h3>
-          <p>Azure · AWS · Docker · Terraform · Git · GitHub Actions</p>
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="bullet"></span>Projects</p>
+          <h2 class="headline" id="projects-title">
+            Built end to end.
+            <span class="muted">Tested, documented, shipped.</span>
+          </h2>
+          <p class="lede">Four of these fit together: a data platform, a model trained on its data, the infrastructure that deploys it, and a tool that keeps the dbt layer honest.</p>
         </div>
       </div>
+
+      <!-- 01 CommercePulse -->
+      <article class="project tint-lilac">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow"><span class="bullet"></span>01 / Data platform</p>
+            <h3 class="headline md">CommercePulse<span class="muted">Raw data to business answers.</span></h3>
+            <p>An end-to-end e-commerce analytics platform: ingestion into a DuckDB warehouse, dbt modeling across bronze, silver and gold layers, then FastAPI services and a Streamlit dashboard on top.</p>
+            <ul class="facts">
+              <li>9 data domains, star schema with 7 facts and 6 dimensions</li>
+              <li>205 dbt tests plus pytest, enforced in CI</li>
+            </ul>
+            <p class="stack">Python · DuckDB · dbt · FastAPI · Streamlit · Docker</p>
+            <a class="more" href="https://github.com/robertogonzalez-dev/CommercePulse">View on GitHub →</a>
+          </div>
+          <div class="ui reveal" aria-hidden="true">
+            <div class="ui-bar"><span>Warehouse</span><span class="tag">MEDALLION</span></div>
+            <div class="layers">
+              <div class="layer bronze"><strong>Bronze</strong><span>9 audited raw tables</span></div>
+              <div class="arrow">↓</div>
+              <div class="layer silver"><strong>Silver</strong><span>11 typed, deduplicated views</span></div>
+              <div class="arrow">↓</div>
+              <div class="layer gold"><strong>Gold</strong><span>7 facts · 6 dimensions · 6 marts</span></div>
+            </div>
+            <p class="ui-foot">205 tests passing</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 PulseForecast -->
+      <article class="project tint-sky">
+        <div class="container split reverse">
+          <div class="reveal">
+            <p class="eyebrow"><span class="bullet"></span>02 / Machine learning</p>
+            <h3 class="headline md">PulseForecast<span class="muted">Two weeks ahead, per product.</span></h3>
+            <p>Daily demand forecasts for every SKU, evaluated honestly with rolling backtests against simple baselines, and served through a REST API that can model the lift from a planned promotion.</p>
+            <ul class="facts">
+              <li>Leak-free features, with a test that proves it</li>
+              <li>One LightGBM model across all products</li>
+            </ul>
+            <p class="stack">Python · pandas · LightGBM · FastAPI · Docker</p>
+            <a class="more" href="https://github.com/robertogonzalez-dev/PulseForecast">View on GitHub →</a>
+          </div>
+          <div class="ui reveal" aria-hidden="true">
+            <div class="ui-bar"><span>Backtest · forecast error (WAPE)</span><span class="tag">LOWER IS BETTER</span></div>
+            <div class="bars">
+              <div class="bar-row best"><span>LightGBM</span><div class="track"><i style="--w:54%"></i></div><b>12.8%</b></div>
+              <div class="bar-row"><span>28-day average</span><div class="track"><i style="--w:86%"></i></div><b>20.4%</b></div>
+              <div class="bar-row"><span>Seasonal naive</span><div class="track"><i style="--w:100%"></i></div><b>23.6%</b></div>
+            </div>
+            <p class="ui-foot">4 folds × 14-day horizon · synthetic benchmark</p>
+            <p class="note">46% less error than the naive baseline</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 dbt-warden -->
+      <article class="project tint-mint">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow"><span class="bullet"></span>03 / Open-source tool</p>
+            <h3 class="headline md">dbt-warden<span class="muted">Standards, enforced in CI.</span></h3>
+            <p>A command-line linter that reads a dbt project's compiled manifest and fails the build on missing tests, missing docs, naming violations and stale sources.</p>
+            <ul class="facts">
+              <li>Zero dependencies, configurable rules, pre-commit hook</li>
+              <li>99% test coverage across Python 3.11–3.13</li>
+            </ul>
+            <p class="stack">Python · dbt · pytest · GitHub Actions</p>
+            <a class="more" href="https://github.com/robertogonzalez-dev/dbt-warden">View on GitHub →</a>
+          </div>
+          <div class="ui terminal reveal" aria-hidden="true">
+            <div class="ui-bar"><span>terminal</span><span class="tag">EXIT 1</span></div>
+<pre><span class="t-dim">$</span> dbt-warden
+<span class="t-err">ERROR</span> W001 orders_summary: no description
+<span class="t-warn">WARN </span> W002 fct_sales.sale_id: no description
+<span class="t-err">ERROR</span> W003 orders_summary: 0 tests, 1 required
+<span class="t-warn">WARN </span> W004 fct_sales: no unique + not_null key
+<span class="t-warn">WARN </span> W004 orders_summary: no unique + not_null key
+<span class="t-err">ERROR</span> W005 orders_summary: expected fct_ or dim_
+<span class="t-warn">WARN </span> W006 raw.customers: no freshness check
+
+<span class="t-dim">7 issues: 3 errors, 4 warnings</span></pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 PulseInfra -->
+      <article class="project tint-peach">
+        <div class="container split reverse">
+          <div class="reveal">
+            <p class="eyebrow"><span class="bullet"></span>04 / Cloud infrastructure</p>
+            <h3 class="headline md">PulseInfra<span class="muted">Merge, and it's live.</span></h3>
+            <p>Terraform that deploys PulseForecast to AWS on ECS Fargate behind a load balancer. GitHub Actions deploys without stored keys, and a failed release rolls itself back.</p>
+            <ul class="facts">
+              <li>Reusable modules for network, registry and service</li>
+              <li>Cost guardrails: Spot capacity, budget alerts, one-click teardown</li>
+            </ul>
+            <p class="stack">Terraform · AWS ECS, ALB, ECR, IAM · GitHub Actions</p>
+            <a class="more" href="https://github.com/robertogonzalez-dev/PulseInfra">View on GitHub →</a>
+          </div>
+          <div class="ui reveal" aria-hidden="true">
+            <div class="ui-bar"><span>Deploy pipeline</span><span class="tag">OIDC · NO KEYS</span></div>
+            <ol class="steps">
+              <li class="done"><span>Build image</span><em>commit SHA tag</em></li>
+              <li class="done"><span>Push to ECR</span><em>scanned on push</em></li>
+              <li class="done"><span>terraform apply</span><em>rolling deploy</em></li>
+              <li class="done"><span>Smoke test</span><em>/health · /forecast</em></li>
+            </ol>
+            <p class="ui-foot">Circuit breaker rolls back failed releases</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 FamilyRoots -->
+      <article class="project tint-rose">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow"><span class="bullet"></span>05 / Full-stack app</p>
+            <h3 class="headline md">FamilyRoots<span class="muted">A family history, kept private.</span></h3>
+            <p>A private genealogy site: import a family tree exported from Ancestry, explore it as an interactive graph, and keep living relatives hidden from anyone who shouldn't see them.</p>
+            <ul class="facts">
+              <li>Admin, editor and viewer roles, enforced on every endpoint</li>
+              <li>Rules that prevent impossible trees, like being your own ancestor</li>
+            </ul>
+            <p class="stack">FastAPI · PostgreSQL · React · TypeScript · React Flow</p>
+            <a class="more" href="https://github.com/robertogonzalez-dev/FamilyRoots">View on GitHub →</a>
+          </div>
+          <div class="ui reveal" aria-hidden="true">
+            <div class="ui-bar"><span>Family tree</span><span class="tag">GEDCOM IMPORT</span></div>
+            <div class="tree">
+              <div class="gen"><span class="person">José Luis<small>1890–1960</small></span><span class="spouse">⚭</span><span class="person">Rosa<small>1895–?</small></span></div>
+              <div class="link-down"></div>
+              <div class="gen"><span class="person">Miguel<small>1921–1998</small></span><span class="person living">Living<small>hidden from viewers</small></span></div>
+            </div>
+            <p class="note">privacy on every endpoint</p>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="container section contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Let's talk</h2>
-      <p>I'm open to integration and data engineering roles. The fastest way to reach me is email.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:Roberto.Gonzalez2209@gmail.com">Roberto.Gonzalez2209@gmail.com</a>
-        <a class="btn" href="https://www.linkedin.com/in/robertogonzalezdev">LinkedIn</a>
-        <a class="btn" href="https://github.com/robertogonzalez-dev">GitHub</a>
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="bullet"></span>Experience</p>
+          <h2 class="headline" id="experience-title">
+            Eight years of
+            <span class="muted">connecting things.</span>
+          </h2>
+          <button class="pill small" type="button" onclick="window.print()">Save resume as PDF</button>
+        </div>
+
+        <ol class="jobs">
+          <li class="job reveal">
+            <div class="job-meta"><span class="dates">Sep 2023 – Present</span></div>
+            <div>
+              <h3>Senior Integrations Engineer</h3>
+              <p class="company">Corona Tools (Venanpri Group)</p>
+              <ul>
+                <li>Architected enterprise integrations connecting IBM i/BPCS ERP, SQL Server, APIs, financial platforms and internal applications, enabling reliable data exchange across critical business systems.</li>
+                <li>Built a Python and SQL Server ETL platform that centralizes ERP data for reporting and analytics, with incremental loading, transformation, logging and automated orchestration.</li>
+                <li>Automated invoice processing and ERP data entry through RPA, replacing manual workflows, while developing T-SQL and Python solutions across SQL Server and IBM DB2.</li>
+                <li>Modernized legacy processes with REST APIs, SSIS, SQL Server Agent, SFTP and scheduled automation, partnering with Finance, Operations, IT and vendors.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta"><span class="dates">Sep 2022 – Sep 2023</span></div>
+            <div>
+              <h3>Full Stack Developer</h3>
+              <p class="company">API</p>
+              <ul>
+                <li>Developed and maintained web applications in PHP and JavaScript, improving application reliability.</li>
+                <li>Integrated Stripe payment processing and REST APIs using Python and FastAPI for secure data exchange across services.</li>
+                <li>Managed application databases and Docker containers across development, deployment and maintenance.</li>
+                <li>Used GitHub for source control and collaboration throughout development and integration projects.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta"><span class="dates">Nov 2021 – Aug 2022</span></div>
+            <div>
+              <h3>Engineer</h3>
+              <p class="company">Backbone Software</p>
+              <ul>
+                <li>Developed SQL solutions across Microsoft SQL Server, PostgreSQL and Google BigQuery for internal reporting, customer analytics and business decisions.</li>
+                <li>Built proof-of-concept and internal applications with JavaScript, React, Python, SQL and Retool.</li>
+                <li>Engineered data solutions supporting Power BI, Tableau, accounting, regulatory reporting and customer analytics.</li>
+                <li>Integrated data across reporting and analytics environments, working with stakeholders on complex data requirements.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta"><span class="dates">Sep 2018 – Nov 2021</span></div>
+            <div>
+              <h3>IT Administration Manager</h3>
+              <p class="company">Peoplelink Group</p>
+              <ul>
+                <li>Designed and developed internal business applications using Python, Django, JavaScript and Microsoft SQL Server.</li>
+                <li>Built database-driven applications and API integrations supporting Accounting, Payroll and other departments.</li>
+                <li>Developed Django applications that centralized operational data and supported data-driven workflows.</li>
+                <li>Created Power BI reporting that turned operational data into insights for employees and leadership.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section soft" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="bullet"></span>Skills</p>
+          <h2 class="headline" id="skills-title">The toolkit.<span class="muted">Old systems and new.</span></h2>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-card reveal">
+            <h3>Integration &amp; ERP</h3>
+            <ul class="chips"><li>IBM i / AS400</li><li>BPCS ERP</li><li>IBM DB2</li><li>REST APIs</li><li>SSIS</li><li>SFTP</li><li>RPA</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Data</h3>
+            <ul class="chips"><li>SQL / T-SQL</li><li>SQL Server</li><li>PostgreSQL</li><li>BigQuery</li><li>dbt</li><li>DuckDB</li><li>Power BI</li><li>Tableau</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Languages &amp; frameworks</h3>
+            <ul class="chips"><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Django</li><li>FastAPI</li><li>PHP</li><li>PowerShell</li><li>C# (foundational)</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="chips"><li>Azure</li><li>AWS</li><li>Docker</li><li>Terraform</li><li>Git</li><li>GitHub Actions</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="dark contact" id="contact" aria-labelledby="contact-title">
+      <div class="container center reveal">
+        <p class="eyebrow light center"><span class="bullet"></span>Contact</p>
+        <h2 class="headline" id="contact-title">
+          Systems that don't talk?
+          <span class="muted">Let's connect them.</span>
+        </h2>
+        <p class="body-dark">I'm open to integration and data engineering roles. Email is the fastest way to reach me.</p>
+        <div class="cta-row">
+          <a class="pill primary" href="mailto:Roberto.Gonzalez2209@gmail.com">Roberto.Gonzalez2209@gmail.com</a>
+          <a class="pill ghost" href="https://www.linkedin.com/in/robertogonzalezdev">LinkedIn</a>
+          <a class="pill ghost" href="https://github.com/robertogonzalez-dev">GitHub</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <p>© <span id="year">2026</span> Roberto Gonzalez</p>
+  <footer class="footer">
+    <div class="container footer-row">
+      <span>Roberto Gonzalez<span class="dot">.</span></span>
+      <span>© <span id="year">2026</span> · Granger, Indiana</span>
+    </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
